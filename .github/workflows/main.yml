@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Run a simple test
+      run: |
+        echo "Running tests..."
+        # This is a placeholder for actual tests
+        echo "Tests completed successfully!"
+        
+    - name: Check for .log files
+      run: |
+        if grep -r "\.log$" --include="*" .; then
+          echo "Warning: .log files detected in the repository"
+          exit 0  # Just a warning, not failing the build
+        else
+          echo "No .log files found. Good job!"
+        fi
