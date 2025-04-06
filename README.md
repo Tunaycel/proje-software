@@ -9,7 +9,7 @@ This repository demonstrates various Git capabilities including:
 
 ## Getting Started
 
-This project contains exercises related to the Software Build Automation Tools course.
+This project contains exercises related to the Software Build Automation Tools course. MODIFIED IN BRANCH2.
 
 Author: Hüseyin Tunay Çelik
 
